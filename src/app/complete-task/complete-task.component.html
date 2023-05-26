@@ -1,0 +1,35 @@
+<GridLayout class="container" rows="auto,auto,*" columns="*,*">
+    <Label row="0" col="0" colSpan="2" text="Công việc đã hoàn thành" textWrap="true" class="fas heading"></Label>
+    
+    <Button *ngIf="complete_tasks.length>0" row="1" col="0" text="Khôi phục" (tap)="restoreTask()" class="btn"></Button>
+    <Button *ngIf="complete_tasks.length>0" row="1" col="1" text="Xóa" (tap)="deleteTask()" class="btn"></Button>
+
+    <ListView *ngIf="complete_tasks.length>0" row="2" col="0" colSpan="2" [items]="complete_tasks" class="list-group" 
+        separatorColor="transparent">
+        <ng-template let-item="item" let-odd="odd" let-even="even" let-i="index">
+            <StackLayout>
+                <GridLayout class="date-title" rows="auto,auto" columns="auto,auto,*">
+                    <Label row="0" col="0" [text]="convertDate(item.date)"></Label>
+                    <Button row="0" col="1" [text]="item.tasks.length" width="25" height="25" 
+                        borderRadius="50" class="fas count">
+                    </Button>
+                    <Button *ngIf="item.hide_task" row="0" col="2" text="&#xf078;" width="25" height="25" 
+                        class="fas arrow" horizontalAlignment="right" (tap)="arrowToggle(item.date)">
+                    </Button>
+                    <Button *ngIf="item.hide_task==false" row="0" col="2" text="&#xf077;" width="25" height="25"
+                        class="fas arrow" horizontalAlignment="right" (tap)="arrowToggle(item.date)">
+                    </Button>
+
+                    <!-- all task name of each date -->
+                    <StackLayout *ngIf="item.hide_task==false" row="1" col="0" colSpan="3" height="100%">
+                        <GridLayout *ngFor="let task of item.tasks" class="task-names">
+                            <CheckBox id="'CB' + i" [text]="task.name" [(ngModel)]="task.isChecked" 
+                            (tap)="checkboxToggle(task.isChecked, task.name, task.due_date)" class="checkbox">
+                            </CheckBox>
+                        </GridLayout>
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+</GridLayout>
