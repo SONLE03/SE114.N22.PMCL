@@ -11,8 +11,6 @@
             <ScrollView row="0" col="0" orientation="vertical" class="scroll-view">
                 <TextView *ngIf="task.detail" [text]="task.detail" class="content" editable = "false"></TextView>
               </ScrollView>
-            <!-- <label row="0" col="0" *ngIf="task.detail" [text]="task.detail" class="content" ></label> -->
-
             <ScrollView row="1" col="0" orientation="horizontal">
                 <StackLayout orientation="horizontal" *ngIf="task.photo">
                     <GridLayout margin="5" *ngFor="let photo of task.photo" rows="*" columns="auto">

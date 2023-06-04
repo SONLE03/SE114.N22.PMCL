@@ -42,7 +42,7 @@
             
             <ScrollView row="2" col="0" colSpan="2" orientation="horizontal">
                 <StackLayout orientation="horizontal" *ngIf="hasImage">
-                    <GridLayout *ngFor="let photo of task_photo" rows="*" columns="auto,20">
+                    <GridLayout margin = "5" *ngFor="let photo of task_photo" rows="*" columns="auto,20">
                         <CardView margin="5" elevation="10" radius="25" horizontalAlignment="left">
                             <Image row="0" col="0" [src]="photo" height="120" width="auto" (tap)="photoViewer(photo)"></Image>
                         </CardView>
