@@ -1,0 +1,40 @@
+ActionBar {
+    background-color: #1D62CF;
+}
+
+TextView {
+    margin-top: 50px;
+    margin-bottom: 45px;
+    margin-left: 0px;
+    margin-right: 5px;
+    font-size: 18px;
+    color: #000;
+    background-color: #eeeeee;
+    border-color: #eeeeee;
+    border-radius: 40%;
+}
+StackLayout {
+    background-image: url('~/app/images/background-bubble.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.findbutton{
+    margin-top: 50px;
+    margin-bottom: 45px;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    height: 40;
+    width: 60;
+    color: #000;
+    background-color: #f0eded;
+    border-radius: 40%;
+}
+.container_
+{
+    background-color: #eeeeee;
+    border-radius: 40%;
+}

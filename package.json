@@ -20,6 +20,7 @@
     "@nativescript/local-notifications": "^6.1.1",
     "@nativescript/theme": "~3.0.2",
     "@nstudio/nativescript-checkbox": "^2.0.5",
+    "ng2-search-filter": "^0.5.1",
     "rxjs": "~7.6.0",
     "zone.js": "~0.13.0"
   },

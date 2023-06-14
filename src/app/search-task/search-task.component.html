@@ -1,0 +1,16 @@
+<!-- search -->
+<ActionBar *ngIf="router.url === '/search'" flat="true" title = "menu">
+    <NavigationButton android.systemIcon="ic_menu_back" text="Back" (tap)="back_previous_page()"></NavigationButton>
+    <GridLayout rows="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto" columns="*,*,*,*,*">
+        <GridLayout class="container_" row="1" col="0" colspan="4"  height="40">
+            <TextView height="40" width="230"
+        hint="    Tìm kiếm..."  class="input input-border" [(ngModel)]="task_name"   ></TextView>
+        </GridLayout>
+
+        <Button class="findbutton" text="Tìm" row="1" col="4" colspan="2" (tap)="ontap(startfind())"></Button>
+    </GridLayout>
+</ActionBar>
+
+<StackLayout>
+    <search-result></search-result>
+</StackLayout>

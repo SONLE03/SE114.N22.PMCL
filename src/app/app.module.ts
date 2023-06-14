@@ -16,6 +16,8 @@ import { EditTaskComponent } from './edit-task/edit-task.component'
 import { NativeScriptDateTimePickerModule } from '@nativescript/datetimepicker/angular';
 import { CompleteTaskComponent } from './complete-task/complete-task.component'
 import { TNSCheckBoxModule } from '@nstudio/nativescript-checkbox/angular';
+import { SearchTaskComponent } from './search-task/search-task.component'
+import { SearchResultComponent } from './search-result/search-result.component';
 @NgModule({
   bootstrap: [AppComponent],
   imports: [NativeScriptModule,
@@ -34,7 +36,9 @@ import { TNSCheckBoxModule } from '@nstudio/nativescript-checkbox/angular';
     TopBarComponent,
     TaskDetailComponent,
     EditTaskComponent,
-    CompleteTaskComponent
+    CompleteTaskComponent,
+    SearchTaskComponent,
+    SearchResultComponent
   ],
   providers: [TaskService, DatePipe,],
   schemas: [NO_ERRORS_SCHEMA],
