@@ -64,10 +64,11 @@ CardView {
     vertical-align: bottom;
     text-align: center;
     margin: 0 20 20 0;
-    font-size: 22;
+    font-size: 40;
     padding: 0;
     border-width: 1;
     border-radius: 50;
-    width: 50;
-    height: 50;
+    width: 60;
+    height: 60;
+    background-color: #38ABFD;
 }

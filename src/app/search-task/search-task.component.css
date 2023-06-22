@@ -29,8 +29,8 @@ StackLayout {
     text-align: center;
     height: 40;
     width: 60;
-    color: #000;
-    background-color: #f0eded;
+    color: white;
+    background-color: #38ABFD;
     border-radius: 40%;
 }
 .container_
